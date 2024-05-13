@@ -79,7 +79,7 @@ input {
 input:focus-visible {
     outline: 1px solid #FF29C3;
     border-radius: 3px;
-}
+  }
 
 button {
     border-radius: 6px;
@@ -93,41 +93,31 @@ button {
 
 @media screen and (max-width: 1000px) {
 
-#gridContainer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr 3fr;
-        margin: 0px;
-        padding: 0px;
-        max-height: 1945px;
-}
+    #gridContainer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+    }
 
-#leftScrollAboutPage {
+    #leftScrollAboutPage {
         color: white;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        margin: 0px;
         width: 100vw;
         height: auto;
-        padding-right: 0;
-}
-#rightScrollSamplePage {
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-start: 1;
-        grid-column-end: 1;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #rightScrollSamplePage {
         margin: 0;
         background-color: #F6F6F6;
         width: 100vw;
-        height: 100vh;
-
-}
-#webName, #aboutGradient {
+        height: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #webName, #aboutGradient {
         padding-left: 40px;
-}
-.arrow {
+    }
+    .arrow {
         box-sizing: border-box;
         height: 5vw;
         width: 5vw;
@@ -136,14 +126,14 @@ button {
         border-width: 0px 1px 1px 0px;
         transform: rotate(45deg);
         transition: border-width 150ms ease-in-out;
-}
+      }
       
-.arrow:hover {
+      .arrow:hover {
         border-bottom-width: 4px;
         border-right-width: 4px;
-}
+      }
       
-.arrowContainer {
+      .arrowContainer {
         display: grid;
         justify-content: space-evenly;
         justify-items: center;
@@ -152,10 +142,14 @@ button {
         background-color: none;
         width: 100vw;
         height: 10vh;
-}
-html {
+        min-height: 10vh;
+        position: static;
+      }
+      html {
         scroll-behavior: smooth;
+      }
 }
-}
+
+
 
 
