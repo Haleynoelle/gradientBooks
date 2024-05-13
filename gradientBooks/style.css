@@ -92,12 +92,14 @@ button {
 
 
 @media screen and (max-width: 1000px) {
+
     #gridContainer {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 3fr 3fr;
         margin: 0px;
         padding: 0px;
+        max-height: 1945px;
     }
 
     #leftScrollAboutPage {
@@ -108,20 +110,19 @@ button {
         grid-column-end: 1;
         margin: 0px;
         width: 100vw;
-        overflow-y: scroll; 
-        scroll-snap-type: y mandatory; 
+        height: auto;
         padding-right: 0;
     }
     #rightScrollSamplePage {
         grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-end: 4;
         grid-column-start: 1;
         grid-column-end: 1;
         margin: 0;
         background-color: #F6F6F6;
         width: 100vw;
-        overflow-y: scroll; 
-        scroll-snap-type: y mandatory; 
+        height: 100vh;
+
     }
     #webName, #aboutGradient {
         padding-left: 40px;
@@ -150,9 +151,11 @@ button {
         align-items: center;
         background-color: none;
         width: 100vw;
+        height: 10vh;
       }
       html {
         scroll-behavior: smooth;
       }
 }
+
 
